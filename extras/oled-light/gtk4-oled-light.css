@@ -1,0 +1,102 @@
+/* OLED Light - true white overrides for libadwaita apps */
+
+/* Core named colors - libadwaita reads these */
+@define-color window_bg_color #FFFFFF;
+@define-color window_fg_color #000000;
+@define-color view_bg_color #FFFFFF;
+@define-color view_fg_color #000000;
+@define-color headerbar_bg_color #F0F0F0;
+@define-color headerbar_fg_color #000000;
+@define-color headerbar_backdrop_color #F5F5F5;
+@define-color headerbar_border_color #C0C0C0;
+@define-color sidebar_bg_color #F5F5F5;
+@define-color sidebar_fg_color #000000;
+@define-color sidebar_border_color #C0C0C0;
+@define-color sidebar_backdrop_color #F5F5F5;
+@define-color card_bg_color #F0F0F0;
+@define-color card_fg_color #000000;
+@define-color popover_bg_color #F0F0F0;
+@define-color popover_fg_color #000000;
+@define-color dialog_bg_color #F0F0F0;
+@define-color dialog_fg_color #000000;
+@define-color accent_bg_color #008BAD;
+@define-color accent_fg_color #FFFFFF;
+@define-color accent_color #008BAD;
+@define-color shade_color rgba(0, 0, 0, 0.08);
+@define-color scrollbar_outline_color rgba(0, 0, 0, 0.15);
+@define-color thumbnail_bg_color #FFFFFF;
+
+/* Backdrop versions of all bg colors */
+@define-color window_bg_backdrop_color #FFFFFF;
+@define-color view_bg_backdrop_color #FFFFFF;
+@define-color card_bg_backdrop_color #F0F0F0;
+
+/* Force content/grid backgrounds */
+gridview, grid, flowbox, iconview, list, listview {
+  background-color: #FFFFFF;
+}
+
+/* Nautilus path bar and toolbar */
+.toolbar, .pathbar, searchbar {
+  background-color: #F0F0F0;
+}
+
+/* Thumbnail frames */
+.thumbnail {
+  background-color: #FFFFFF;
+}
+
+/* Views */
+.view, textview, textview text {
+  background-color: #FFFFFF;
+}
+
+/* Backdrop state - keep white on unfocus */
+:backdrop {
+  background-color: inherit;
+}
+
+headerbar:backdrop {
+  background: @headerbar_backdrop_color !important;
+  background-color: @headerbar_backdrop_color !important;
+  box-shadow: none;
+  transition: none;
+}
+
+.titlebar:backdrop {
+  background: #F5F5F5 !important;
+  background-color: #F5F5F5 !important;
+}
+
+window:backdrop {
+  background-color: #FFFFFF !important;
+}
+
+window:backdrop headerbar,
+window:backdrop .titlebar,
+window:backdrop .top-bar {
+  background: #F5F5F5 !important;
+  background-color: #F5F5F5 !important;
+}
+
+window:backdrop .toolbar,
+window:backdrop .pathbar,
+window:backdrop searchbar {
+  background-color: #F5F5F5 !important;
+}
+
+window:backdrop .sidebar,
+window:backdrop .navigation-sidebar,
+window:backdrop .sidebar-pane {
+  background-color: #F5F5F5 !important;
+}
+
+window:backdrop gridview,
+window:backdrop grid,
+window:backdrop flowbox,
+window:backdrop iconview,
+window:backdrop list,
+window:backdrop listview,
+window:backdrop .view {
+  background-color: #FFFFFF !important;
+}

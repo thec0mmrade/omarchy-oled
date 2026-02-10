@@ -75,6 +75,16 @@ else
 fi
 
 echo
+
+# --- GTK4 / libadwaita overrides (light variant) ---
+LIGHT_CSS="$SCRIPT_DIR/oled-light/gtk4-oled-light.css"
+if [ -f "$LIGHT_CSS" ]; then
+  echo "To use the light GTK4 overrides with oled-light, run:"
+  echo "  cp $LIGHT_CSS $GTK4_DIR/gtk.css"
+  echo "(This replaces the dark OLED gtk.css installed above)"
+fi
+
+echo
 echo "=== Done ==="
 echo
 echo "NOTE: These extras live OUTSIDE the omarchy theme system."

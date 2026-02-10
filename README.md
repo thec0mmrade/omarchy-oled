@@ -54,6 +54,12 @@ cp -r extras/oled-light ~/.config/omarchy/themes/oled-light
 omarchy-theme-set oled-light
 ```
 
+To also theme Nautilus and other libadwaita apps for the light variant:
+
+```bash
+cp extras/oled-light/gtk4-oled-light.css ~/.config/gtk-4.0/gtk.css
+```
+
 ## Uninstalling Extras
 
 ```bash

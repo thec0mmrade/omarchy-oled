@@ -39,6 +39,7 @@ Files in `extras/` are **not** managed by `omarchy-theme-set` and must be instal
 - **`extras/gtk4-oled.css`** — libadwaita/GTK4 color overrides for apps like Nautilus. Uses layered near-black shades (#000000, #050505, #0A0A0A) for depth.
 - **`extras/setup-oled-extras.sh`** — Idempotent install script for the above extras.
 - **`extras/oled-light/`** — Complete light variant theme directory (bg=#FFFFFF, fg=#000000, accent=#008BAD). Copy to `~/.config/omarchy/themes/oled-light` and activate with `omarchy-theme-set oled-light`.
+- **`extras/oled-light/gtk4-oled-light.css`** — libadwaita/GTK4 color overrides for the light variant. Uses layered near-white shades (#FFFFFF, #F5F5F5, #F0F0F0) for depth. Install with `cp extras/oled-light/gtk4-oled-light.css ~/.config/gtk-4.0/gtk.css`.
 
 ## Key Color Values
 
@@ -65,6 +66,7 @@ Files in `extras/` are **not** managed by `omarchy-theme-set` and must be instal
 - **True black #000000** — not near-black, for maximum OLED contrast and power saving.
 - **Cyan is the only color accent** — everything else is grayscale. Muted red/green/yellow only for semantic signals (errors, diffs, warnings).
 - **Layered blacks for depth** — in GTK4 overrides: headerbar #0A0A0A, sidebar #050505, content #000000.
+- **Layered whites for depth** — in light GTK4 overrides: headerbar #F0F0F0, sidebar #F5F5F5, content #FFFFFF.
 - **Light variant uses darker cyan** (#008BAD) for WCAG AA contrast on white background.
 
 When editing theme files, ensure hex values stay consistent with `colors.toml`.
