@@ -37,9 +37,9 @@ Files in `extras/` are **not** managed by `omarchy-theme-set` and must be instal
 - **`extras/Monocraft-nerd-fonts-patched.ttc`** — Nerd Font-patched Monocraft font (Minecraft-inspired chunky pixel font). Installed to `~/.local/share/fonts/` and set as system font via `omarchy-font-set`.
 - **`extras/oled-glow.glsl`** — GLSL fragment shader for Ghostty: subtle cyan-tinted bloom around bright text on dark background (inverse of a drop shadow), plus faint scanline overlay. Uses Ghostty's iChannel0/iResolution API.
 - **`extras/gtk4-oled.css`** — libadwaita/GTK4 color overrides for apps like Nautilus. Uses layered near-black shades (#000000, #050505, #0A0A0A) for depth.
-- **`extras/setup-oled-extras.sh`** — Idempotent install script for the above extras.
+- **`extras/setup-oled-extras.sh`** — Idempotent install script for the above extras. Detects the active variant (`oled` or `oled-light`) from `~/.config/omarchy/current/theme.name` and adjusts automatically: dark installs the glow shader and dark GTK4 css, light removes the glow shader and installs light GTK4 css. **Re-run this script after switching between dark and light variants.**
 - **`extras/oled-light/`** — Complete light variant theme directory (bg=#FFFFFF, fg=#000000, accent=#008BAD). Copy to `~/.config/omarchy/themes/oled-light` and activate with `omarchy-theme-set oled-light`.
-- **`extras/oled-light/gtk4-oled-light.css`** — libadwaita/GTK4 color overrides for the light variant. Uses layered near-white shades (#FFFFFF, #F5F5F5, #F0F0F0) for depth. Install with `cp extras/oled-light/gtk4-oled-light.css ~/.config/gtk-4.0/gtk.css`.
+- **`extras/oled-light/gtk4-oled-light.css`** — libadwaita/GTK4 color overrides for the light variant. Uses layered near-white shades (#FFFFFF, #F5F5F5, #F0F0F0) for depth. Installed automatically by `setup-oled-extras.sh` when the light variant is active.
 
 ## Key Color Values
 
