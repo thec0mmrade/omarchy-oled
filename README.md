@@ -2,6 +2,8 @@
 
 A high-contrast OLED dark theme for [Omarchy](https://omarchy.com). True black backgrounds, crisp pixel aesthetics, and cyan accents.
 
+![OLED theme preview](preview.png)
+
 ## Install
 
 ```bash
