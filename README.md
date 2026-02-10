@@ -53,6 +53,8 @@ The script detects the active variant (`oled` or `oled-light`) and adjusts autom
 
 A complete light theme (white background, dark cyan accent) is included:
 
+![OLED Light theme preview](preview-light.png)
+
 ```bash
 cp -r extras/oled-light ~/.config/omarchy/themes/oled-light
 omarchy-theme-set oled-light
