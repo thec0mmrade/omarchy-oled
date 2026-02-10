@@ -12,7 +12,7 @@ echo
 
 # --- Monocraft Nerd Font ---
 FONT_DIR="$HOME/.local/share/fonts"
-FONT_NAME="Monocraft Nerd Font"
+FONT_NAME="Monocraft"
 
 if [ -f "$FONT_DIR/Monocraft-nerd-fonts-patched.ttc" ]; then
   echo "[ok] $FONT_NAME already installed (skipped)"
