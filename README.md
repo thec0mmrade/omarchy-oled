@@ -13,10 +13,10 @@ omarchy-theme-set oled
 
 | Role          | Hex       | Preview |
 |---------------|-----------|---------|
-| Background    | `#000000` | ![#000000](https://via.placeholder.com/16/000000/000000) |
-| Foreground    | `#E8E8E8` | ![#E8E8E8](https://via.placeholder.com/16/E8E8E8/E8E8E8) |
-| Accent/Cyan   | `#00D4FF` | ![#00D4FF](https://via.placeholder.com/16/00D4FF/00D4FF) |
-| Selection BG  | `#00D4FF` | ![#00D4FF](https://via.placeholder.com/16/00D4FF/00D4FF) |
+| Background    | `#000000` | ![#000000](https://placehold.co/16x16/000000/000000) |
+| Foreground    | `#E8E8E8` | ![#E8E8E8](https://placehold.co/16x16/E8E8E8/E8E8E8) |
+| Accent/Cyan   | `#00D4FF` | ![#00D4FF](https://placehold.co/16x16/00D4FF/00D4FF) |
+| Selection BG  | `#00D4FF` | ![#00D4FF](https://placehold.co/16x16/00D4FF/00D4FF) |
 
 ### Terminal Colors
 
@@ -39,11 +39,13 @@ Optional enhancements installed separately:
 ./extras/setup-oled-extras.sh
 ```
 
-This installs:
+The script detects the active variant (`oled` or `oled-light`) and adjusts automatically:
 
 - **Monocraft Nerd Font** — Minecraft-inspired chunky pixel font
-- **Ghostty glow shader** — Subtle cyan bloom around bright text
-- **GTK4 overrides** — True black backgrounds in Nautilus and other libadwaita apps
+- **Ghostty glow shader** — Subtle cyan bloom around bright text (dark variant only; replaces any existing shaders)
+- **GTK4 overrides** — Installs the correct dark or light libadwaita overrides for Nautilus and other GTK4 apps
+
+**Re-run this script after switching between dark and light variants.**
 
 ### Light Variant
 
@@ -52,12 +54,7 @@ A complete light theme (white background, dark cyan accent) is included:
 ```bash
 cp -r extras/oled-light ~/.config/omarchy/themes/oled-light
 omarchy-theme-set oled-light
-```
-
-To also theme Nautilus and other libadwaita apps for the light variant:
-
-```bash
-cp extras/oled-light/gtk4-oled-light.css ~/.config/gtk-4.0/gtk.css
+./extras/setup-oled-extras.sh
 ```
 
 ## Uninstalling Extras
