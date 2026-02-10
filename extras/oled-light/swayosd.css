@@ -1,0 +1,10 @@
+@define-color background-color #FFFFFF;
+@define-color border-color #008BAD;
+@define-color label #000000;
+@define-color image #000000;
+@define-color progress #008BAD;
+
+* {
+  text-shadow: none;
+  -gtk-icon-shadow: none;
+}

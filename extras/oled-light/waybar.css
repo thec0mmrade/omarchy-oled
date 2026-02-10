@@ -1,0 +1,7 @@
+@define-color foreground #000000;
+@define-color background #FFFFFF;
+
+* {
+  text-shadow: none;
+  -gtk-icon-shadow: none;
+}
